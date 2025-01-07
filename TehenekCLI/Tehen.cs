@@ -15,6 +15,13 @@ class Tehen : IEquatable<Tehen>
         Mennyisegek[int.Parse(nap)] = int.Parse(menyiseg);
     }
 
+    public int HetiTej => Mennyisegek.Sum();
+
+    public int HetiAtlag =>
+        Mennyisegek.Count(x => x > 0) >= 3
+            ? (int)Math.Round(Mennyisegek.Average())
+            : -1;
+
     public Tehen(string id)
     {
         Id = id;

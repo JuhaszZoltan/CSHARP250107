@@ -25,3 +25,6 @@ while (!sr.EndOfStream)
         happyCows[index].EredmenytRogzit(nap, mennyiseg);
     }
 }
+
+Console.WriteLine("3. feladat");
+Console.WriteLine($"Az állomány {happyCows.Count} tehén adatait tartalmazza");

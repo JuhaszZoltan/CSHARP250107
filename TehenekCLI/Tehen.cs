@@ -19,7 +19,7 @@ class Tehen : IEquatable<Tehen>
 
     public int HetiAtlag =>
         Mennyisegek.Count(x => x > 0) >= 3
-            ? (int)Math.Round(Mennyisegek.Average())
+            ? (int)Math.Round(HetiTej / (double)Mennyisegek.Count(x => x > 0))
             : -1;
 
     public Tehen(string id)
